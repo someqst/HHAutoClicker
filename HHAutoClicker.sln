@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36518.9 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HHAutoClicker", "HHAutoClicker\HHAutoClicker.csproj", "{F613F2F0-505B-450B-8EC2-F94B38B7F5F1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F613F2F0-505B-450B-8EC2-F94B38B7F5F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F613F2F0-505B-450B-8EC2-F94B38B7F5F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F613F2F0-505B-450B-8EC2-F94B38B7F5F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F613F2F0-505B-450B-8EC2-F94B38B7F5F1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7E9B3DE0-84AB-434D-8831-FCC83F2F4BF9}
+	EndGlobalSection
+EndGlobal
