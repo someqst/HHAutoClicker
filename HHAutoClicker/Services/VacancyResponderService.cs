@@ -107,7 +107,6 @@ namespace HHAutoClicker.Services
             }
         }
 
-
         private async Task<int> GetPagesCountAsync()
         {
             var pages = _page.Locator("a[data-qa=\"pager-page\"]").Last;

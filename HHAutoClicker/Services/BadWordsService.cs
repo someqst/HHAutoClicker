@@ -1,7 +1,6 @@
 ﻿
 namespace HHAutoClicker.Services
 {
-
     public interface IBadWordsService
     {
         bool HasBadWord(string name);

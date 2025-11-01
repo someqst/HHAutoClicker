@@ -11,7 +11,6 @@ namespace HHAutoClicker.Services
         Task SaveAsync();
     }
 
-
     public sealed class SeenVacanciesService : ISeenVacancies
     {
         private readonly string _path;

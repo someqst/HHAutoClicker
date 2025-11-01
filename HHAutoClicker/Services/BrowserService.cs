@@ -2,7 +2,6 @@
 
 namespace HHAutoClicker.Services
 {
-
     public interface IBrowserService : IAsyncDisposable
     {
         IPage Page { get; }
