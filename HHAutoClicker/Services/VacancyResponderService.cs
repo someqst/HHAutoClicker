@@ -1,5 +1,6 @@
 ﻿using HHAutoClicker.DTO;
 using Microsoft.Playwright;
+using System.Threading.Tasks;
 
 namespace HHAutoClicker.Services
 {
@@ -91,10 +92,30 @@ namespace HHAutoClicker.Services
 
             if (oldUrl != _page.Url)
             {
+                await Task.Delay(3000);
+                await AnswerVacancyQuestions();
                 await _page.GoBackAsync();
             }
 
             await _page.WaitForTimeoutAsync(5000);
+        }
+
+        private async Task AnswerVacancyQuestions()
+        {
+            // TODO: сделать это потом с ИИ настроенным под меня
+            var questions = _page.Locator("div[data-qa=\"task-body\"]");
+            var questionsCount = await questions.CountAsync();
+
+            for (int i = 0; i < questionsCount; i++)
+            {
+                var question = questions.Nth(i);
+                var questionText = (await question.Locator("div[data-qa=\"task-question\"]").AllTextContentsAsync()).First();
+                Console.WriteLine(questionText);
+
+                var textArea = question.Locator("textarea[type=\"textarea\"]");
+                await textArea.FillAsync("Я ни знаю ничиво");
+            }
+
         }
 
         private async Task ClickIfExists(string locator, CancellationToken ct)
