@@ -1,6 +1,4 @@
-﻿using HHAutoClicker.DTO;
-using Microsoft.Playwright;
-using System.Threading.Tasks;
+﻿using Microsoft.Playwright;
 
 namespace HHAutoClicker.Services
 {
@@ -41,7 +39,7 @@ namespace HHAutoClicker.Services
             var url = $"https://hh.ru/search/vacancy?text={query}&order_by=publication_time&search_field=name&page={page}";
 
             await _page.GotoAsync(url);
-            var vacancies = _page.Locator("div[data-qa=\"vacancy-serp__vacancy\"]");
+            var vacancies = _page.Locator("article[data-qa=\"vacancy-serp__vacancy\"]");
             var count = await vacancies.CountAsync();
 
             for (int i = 0; i < count; i++)
@@ -93,7 +91,7 @@ namespace HHAutoClicker.Services
             if (oldUrl != _page.Url)
             {
                 await Task.Delay(3000);
-                await AnswerVacancyQuestions();
+                // await AnswerVacancyQuestions();
                 await _page.GoBackAsync();
             }
 
